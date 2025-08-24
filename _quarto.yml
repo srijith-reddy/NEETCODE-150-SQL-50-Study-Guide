@@ -2,7 +2,9 @@ project:
   type: website
 
 website:
-  title: "Neetcode Python and SQL Problems"
+  title: "Neetcode 150 & SQL 50 Study Guide"
+  site-url: https://srijith-reddy.github.io/NEETCODE-150-SQL-50-Study-Guide/
+  repo-url: https://github.com/srijith-reddy/NEETCODE-150-SQL-50-Study-Guide
   navbar:
     left:
       - href: index.qmd
