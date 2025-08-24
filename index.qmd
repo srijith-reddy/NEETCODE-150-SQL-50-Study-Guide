@@ -15,16 +15,6 @@ It’s organized for fast reference and practice, with detailed explanations and
 
 ---
 
-## 📂 Sections
-
-- [Python Problems](Neetcode Python and SQL Problems.qmd#python-problems)  
-  Covers array, string, dynamic programming, graph, and other common coding interview questions with solutions.
-
-- [SQL Problems](Neetcode Python and SQL Problems.qmd#sql-problems)  
-  Includes SELECT queries, joins, window functions, aggregations, and advanced interview-style problems.
-
----
-
 ## 🎯 How to Use
 
 - Expand code blocks using the **“Code”** toggle to reveal Python or SQL solutions.  
