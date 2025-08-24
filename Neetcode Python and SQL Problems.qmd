@@ -10,7 +10,6 @@ format:
     anchor-sections: true
 ---
 
-
 # 🧠 NeetCode 150+ Problems
 
 ## Problem 1: Two Sum
@@ -23,12 +22,18 @@ format:
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. Each input has exactly one solution, and you cannot use the same element twice.
 
 **Examples:**
-- Input: nums = [2,7,11,15], target = 9
+```markdown
+Input: nums = [2,7,11,15], target = 9
 Output: [0,1]
-- Input: nums = [3,2,4], target = 6
+```
+```markdown
+Input: nums = [3,2,4], target = 6
 Output: [1,2]
-- Input: nums = [3,3], target = 6
+```
+```markdown
+Input: nums = [3,3], target = 6
 Output: [0,1]
+```
 
 **Approach:**
 Use a HashMap to store seen numbers. For each number, check if (target - num) is already in the map. If so, return [map[target - num], current_index].
@@ -55,10 +60,14 @@ class Solution:
 Given prices[i] = stock price on day i, find the max profit from one buy and one sell (buy before sell). If no profit is possible, return 0.
 
 **Examples:**
-- Input: prices = [7,1,5,3,6,4]
+```markdown
+Input: prices = [7,1,5,3,6,4]
 Output: 5
-- Input: prices = [7,6,4,3,1]
+```
+```markdown
+Input: prices = [7,6,4,3,1]
 Output: 0
+```
 
 **Approach:**
 Track minimum price so far. For each price, calculate potential profit (price - min_price). Update max_profit if potential is higher.
@@ -90,10 +99,14 @@ class Solution:
 Given a sorted array of integers and a target value, return the index if the target is found. Otherwise, return -1.
 
 **Examples:**
-- Input: nums = [-1,0,3,5,9,12], target = 9
+```markdown
+Input: nums = [-1,0,3,5,9,12], target = 9
 Output: 4
-- Input: nums = [-1,0,3,5,9,12], target = 2
+```
+```markdown
+Input: nums = [-1,0,3,5,9,12], target = 2
 Output: -1
+```
 
 **Approach:**
 Standard binary search using left, right, and mid pointers.
@@ -124,8 +137,10 @@ class Solution:
 Given an integer array nums, return all unique triplets [nums[i], nums[j], nums[k]] such that they sum to zero.
 
 **Examples:**
-- Input: nums = [-1,0,1,2,-1,-4]
+```markdown
+Input: nums = [-1,0,1,2,-1,-4]
 Output: [[-1,-1,2],[-1,0,1]]
+```
 
 **Approach:**
 Sort array, use two pointers to fix first element and find remaining two in a while loop.
@@ -165,8 +180,10 @@ class Solution:
 Given n non-negative integers a1, a2, ..., an , where each represents a point at coordinate (i, ai), find two lines that together with the x-axis form a container, such that the container contains the most water.
 
 **Examples:**
-- Input: height = [1,8,6,2,5,4,8,3,7]
+```markdown
+Input: height = [1,8,6,2,5,4,8,3,7]
 Output: 49
+```
 
 **Approach:**
 Use two pointers, move the pointer pointing to the smaller height inward. Track max area.
@@ -196,12 +213,18 @@ class Solution:
 Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
 **Examples:**
-- Input: s = "()"
+```markdown
+Input: s = "()"
 Output: true
-- Input: s = "()[]{}"
+```
+```markdown
+Input: s = "()[]{}"
 Output: true
-- Input: s = "(]"
+```
+```markdown
+Input: s = "(]"
 Output: false
+```
 
 **Approach:**
 Use a stack to track open brackets. Match with correct closing brackets as you go.
@@ -232,8 +255,10 @@ class Solution:
 Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
 
 **Examples:**
-- Input: l1 = [1,2,4], l2 = [1,3,4]
+```markdown
+Input: l1 = [1,2,4], l2 = [1,3,4]
 Output: [1,1,2,3,4,4]
+```
 
 **Approach:**
 Use recursion or dummy node with iteration to merge in-place.
@@ -266,10 +291,14 @@ class Solution:
 Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 
 **Examples:**
-- Input: s = "anagram", t = "nagaram"
+```markdown
+Input: s = "anagram", t = "nagaram"
 Output: true
-- Input: s = "rat", t = "car"
+```
+```markdown
+Input: s = "rat", t = "car"
 Output: false
+```
 
 **Approach:**
 Count character frequency using dictionaries or collections.Counter.
@@ -291,8 +320,10 @@ class Solution:
 Given an array of strings strs, group the anagrams together.
 
 **Examples:**
-- Input: strs = ["eat","tea","tan","ate","nat","bat"]
+```markdown
+Input: strs = ["eat","tea","tan","ate","nat","bat"]
 Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+```
 
 **Approach:**
 Use a dictionary with sorted string as key. Append anagrams to list mapped to that key.
@@ -318,8 +349,10 @@ class Solution:
 Given an integer array nums and an integer k, return the k most frequent elements.
 
 **Examples:**
-- Input: nums = [1,1,1,2,2,3], k = 2
+```markdown
+Input: nums = [1,1,1,2,2,3], k = 2
 Output: [1,2]
+```
 
 **Approach:**
 Use Counter to count frequency. Use heapq.nlargest or bucket sort to find top k.
@@ -342,8 +375,10 @@ class Solution:
 Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence.
 
 **Examples:**
-- Input: nums = [100,4,200,1,3,2]
+```markdown
+Input: nums = [100,4,200,1,3,2]
 Output: 4
+```
 
 **Approach:**
 Use a set. For each number, only start counting if it's the beginning of a sequence.
@@ -373,8 +408,10 @@ class Solution:
 You are given an array of integers nums, and there is a sliding window of size k. Return the maximum value in each window.
 
 **Examples:**
-- Input: nums = [1,3,-1,-3,5,3,6,7], k = 3
+```markdown
+Input: nums = [1,3,-1,-3,5,3,6,7], k = 3
 Output: [3,3,5,5,6,7]
+```
 
 **Approach:**
 Use a deque to keep indexes of useful elements. Maintain max at the front.
@@ -406,8 +443,10 @@ class Solution:
 Given the root of a binary tree, invert the tree, and return its root.
 
 **Examples:**
-- Input: root = [4,2,7,1,3,6,9]
+```markdown
+Input: root = [4,2,7,1,3,6,9]
 Output: [4,7,2,9,6,3,1]
+```
 
 **Approach:**
 Use DFS or BFS to swap the left and right child of every node recursively or iteratively.
@@ -432,8 +471,10 @@ class Solution:
 Given the root of a binary tree, return its maximum depth.
 
 **Examples:**
-- Input: root = [3,9,20,null,null,15,7]
+```markdown
+Input: root = [3,9,20,null,null,15,7]
 Output: 3
+```
 
 **Approach:**
 Recursively compute depth of left and right subtree. Return max of both + 1.
@@ -457,10 +498,14 @@ class Solution:
 Given two binary trees, check if they are the same (structure and node values).
 
 **Examples:**
-- Input: p = [1,2,3], q = [1,2,3]
+```markdown
+Input: p = [1,2,3], q = [1,2,3]
 Output: true
-- Input: p = [1,2], q = [1,null,2]
+```
+```markdown
+Input: p = [1,2], q = [1,null,2]
 Output: false
+```
 
 **Approach:**
 Use recursion. If roots are same and left/right subtrees match, return True.
@@ -486,8 +531,10 @@ class Solution:
 Check if a binary tree 'subRoot' is a subtree of binary tree 'root'.
 
 **Examples:**
-- Input: root = [3,4,5,1,2], subRoot = [4,1,2]
+```markdown
+Input: root = [3,4,5,1,2], subRoot = [4,1,2]
 Output: true
+```
 
 **Approach:**
 Use recursion to compare every subtree of root with subRoot using sameTree function.
@@ -520,8 +567,10 @@ class Solution:
 Given a BST, find the lowest common ancestor (LCA) of two nodes.
 
 **Examples:**
-- Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8
+```markdown
+Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8
 Output: 6
+```
 
 **Approach:**
 Use BST property. If both p and q are smaller, go left; if both larger, go right. Otherwise, current is LCA.
@@ -549,8 +598,10 @@ class Solution:
 Return the level order traversal of a binary tree (i.e., from left to right, level by level).
 
 **Examples:**
-- Input: root = [3,9,20,null,null,15,7]
+```markdown
+Input: root = [3,9,20,null,null,15,7]
 Output: [[3],[9,20],[15,7]]
+```
 
 **Approach:**
 Use a queue (BFS) and process each level by counting its size.
@@ -586,8 +637,10 @@ class Solution:
 Given the root of a binary tree, return the values of the nodes you can see ordered from top to bottom.
 
 **Examples:**
-- Input: root = [1,2,3,null,5,null,4]
+```markdown
+Input: root = [1,2,3,null,5,null,4]
 Output: [1,3,4]
+```
 
 **Approach:**
 Use BFS and capture the last node value at each level.
@@ -624,8 +677,10 @@ class Solution:
 A node X in the tree is named good if in the path from root to X there are no nodes with a value greater than X. Return the number of good nodes.
 
 **Examples:**
-- Input: root = [3,1,4,3,null,1,5]
+```markdown
+Input: root = [3,1,4,3,null,1,5]
 Output: 4
+```
 
 **Approach:**
 Use DFS and pass the max seen so far down the tree.
@@ -653,10 +708,14 @@ class Solution:
 Determine if a binary tree is a valid binary search tree (BST).
 
 **Examples:**
-- Input: root = [2,1,3]
+```markdown
+Input: root = [2,1,3]
 Output: true
-- Input: root = [5,1,4,null,null,3,6]
+```
+```markdown
+Input: root = [5,1,4,null,null,3,6]
 Output: false
+```
 
 **Approach:**
 Use recursion with min/max bounds or use inorder traversal to verify ascending order.
@@ -684,8 +743,10 @@ class Solution:
 Given the root of a BST, and an integer k, return the kth smallest value in the tree.
 
 **Examples:**
-- Input: root = [3,1,4,null,2], k = 1
+```markdown
+Input: root = [3,1,4,null,2], k = 1
 Output: 1
+```
 
 **Approach:**
 Inorder traversal of BST gives sorted order. Use counter to track kth element.
@@ -721,8 +782,10 @@ class Solution:
 Given a binary tree, find the lowest common ancestor (LCA) of two given nodes p and q.
 
 **Examples:**
-- Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
+```markdown
+Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
 Output: 3
+```
 
 **Approach:**
 Use recursion. If root is either p or q or null, return root. Recurse left and right. If both sides return non-null, root is LCA.
@@ -750,8 +813,10 @@ class Solution:
 Given preorder and inorder traversal of a tree, construct the binary tree.
 
 **Examples:**
-- Input: preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]
+```markdown
+Input: preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]
 Output: [3,9,20,null,null,15,7]
+```
 
 **Approach:**
 Preorder gives root, inorder gives left/right split. Recursively build left and right subtrees.
@@ -779,8 +844,10 @@ class Solution:
 Find the path in the binary tree which gives the maximum sum (can start and end at any node).
 
 **Examples:**
-- Input: root = [-10,9,20,null,null,15,7]
+```markdown
+Input: root = [-10,9,20,null,null,15,7]
 Output: 42
+```
 
 **Approach:**
 Use DFS to calculate the max path through each node. Track global max.
@@ -811,8 +878,10 @@ class Solution:
 Design an algorithm to serialize and deserialize a binary tree.
 
 **Examples:**
-- Input: root = [1,2,3,null,null,4,5]
+```markdown
+Input: root = [1,2,3,null,null,4,5]
 Output: same tree
+```
 
 **Approach:**
 Use BFS. Serialize to string with null markers. Deserialize using a queue and position logic.
@@ -864,8 +933,10 @@ class Codec:
 Given a reference of a node in a connected undirected graph, return a deep copy (clone) of the graph.
 
 **Examples:**
-- Input: adjList = [[2,4],[1,3],[2,4],[1,3]]
+```markdown
+Input: adjList = [[2,4],[1,3],[2,4],[1,3]]
 Output: [[2,4],[1,3],[2,4],[1,3]]
+```
 
 **Approach:**
 Use DFS with a hashmap to track cloned nodes and prevent infinite loops.
@@ -898,8 +969,10 @@ class Solution:
 Given a 2D grid map of '1's (land) and '0's (water), count the number of islands.
 
 **Examples:**
-- Input: grid = [["1","1","1","1","0"],["1","1","0","1","0"],["1","1","0","0","0"],["0","0","0","0","0"]]
+```markdown
+Input: grid = [["1","1","1","1","0"],["1","1","0","1","0"],["1","1","0","0","0"],["0","0","0","0","0"]]
 Output: 1
+```
 
 **Approach:**
 Use DFS to mark all connected land. Increment island count each time you find unvisited land.
@@ -940,8 +1013,10 @@ class Solution:
 Return the area of the largest island in the given 2D grid.
 
 **Examples:**
-- Input: grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0]]
+```markdown
+Input: grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0]]
 Output: 6
+```
 
 **Approach:**
 DFS to calculate area for each island and track maximum encountered.
@@ -971,8 +1046,10 @@ class Solution:
 Find cells where water can flow to both the Pacific and Atlantic oceans.
 
 **Examples:**
-- Input: heights = [[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]
+```markdown
+Input: heights = [[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]
 Output: [[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]
+```
 
 **Approach:**
 DFS from ocean borders and mark visited cells. Return intersection of visited sets.
@@ -1011,8 +1088,10 @@ class Solution:
 Capture all regions that are surrounded by 'X'.
 
 **Examples:**
-- Input: board = [["X","X","X","X"],["X","O","O","X"],["X","X","O","X"],["X","O","X","X"]]
+```markdown
+Input: board = [["X","X","X","X"],["X","O","O","X"],["X","X","O","X"],["X","O","X","X"]]
 Output: [["X","X","X","X"],["X","X","X","X"],["X","X","X","X"],["X","O","X","X"]]
+```
 
 **Approach:**
 DFS from border 'O's and mark as safe. Flip all remaining 'O' to 'X'.
@@ -1054,8 +1133,10 @@ class Solution:
 Given a grid, each cell can be empty (0), fresh orange (1), or rotten (2). Every minute, any fresh orange adjacent to a rotten one becomes rotten. Return the minimum number of minutes until no cell has a fresh orange.
 
 **Examples:**
-- Input: grid = [[2,1,1],[1,1,0],[0,1,1]]
+```markdown
+Input: grid = [[2,1,1],[1,1,0],[0,1,1]]
 Output: 4
+```
 
 **Approach:**
 Use BFS to simulate the spread. Track time and count fresh oranges.
@@ -1097,8 +1178,10 @@ class Solution:
 You are given an m × n grid of rooms initialized with -1 (wall), 0 (gate), or INF (empty room). Fill each empty room with the distance to its nearest gate.
 
 **Examples:**
-- Input: rooms = [[INF,-1,0,INF],[INF,INF,INF,-1],[INF,-1,INF,-1],[0,-1,INF,INF]]
+```markdown
+Input: rooms = [[INF,-1,0,INF],[INF,INF,INF,-1],[INF,-1,INF,-1],[0,-1,INF,INF]]
 Output: [[3,-1,0,1],[2,2,1,-1],[1,-1,2,-1],[0,-1,3,4]]
+```
 
 **Approach:**
 Use multi-source BFS from all gates simultaneously.
@@ -1133,10 +1216,14 @@ class Solution:
 There are a total of numCourses you have to take, labeled from 0 to numCourses - 1. Some courses have prerequisites. Determine if it's possible to finish all courses.
 
 **Examples:**
-- Input: numCourses = 2, prerequisites = [[1,0]]
+```markdown
+Input: numCourses = 2, prerequisites = [[1,0]]
 Output: true
-- Input: numCourses = 2, prerequisites = [[1,0],[0,1]]
+```
+```markdown
+Input: numCourses = 2, prerequisites = [[1,0],[0,1]]
 Output: false
+```
 
 **Approach:**
 Use DFS with cycle detection (visited and path set), or Kahn’s algorithm for topological sort.
@@ -1175,8 +1262,10 @@ class Solution:
 Return the ordering of courses to finish all courses or an empty array if impossible.
 
 **Examples:**
-- Input: numCourses = 4, prerequisites = [[1,0],[2,0],[3,1],[3,2]]
+```markdown
+Input: numCourses = 4, prerequisites = [[1,0],[2,0],[3,1],[3,2]]
 Output: [0,1,2,3] or [0,2,1,3]
+```
 
 **Approach:**
 Topological sort using DFS with post-order append and cycle detection.
@@ -1219,8 +1308,10 @@ class Solution:
 Given a list of words sorted lexicographically by alien dictionary order, return the order of letters in the alien language.
 
 **Examples:**
-- Input: words = ["wrt","wrf","er","ett","rftt"]
+```markdown
+Input: words = ["wrt","wrf","er","ett","rftt"]
 Output: "wertf"
+```
 
 **Approach:**
 Build graph of letters from word pairs, topologically sort.
@@ -1264,8 +1355,10 @@ class Solution:
 Given a list of airline tickets represented as pairs of departure and arrival airports, reconstruct the itinerary starting at JFK and using all tickets exactly once.
 
 **Examples:**
-- Input: [["MUC","LHR"],["JFK","MUC"],["SFO","SJC"],["LHR","SFO"]]
+```markdown
+Input: [["MUC","LHR"],["JFK","MUC"],["SFO","SJC"],["LHR","SFO"]]
 Output: ["JFK","MUC","LHR","SFO","SJC"]
+```
 
 **Approach:**
 Use DFS + backtracking or Hierholzer's algorithm to find Eulerian path.
@@ -1296,8 +1389,10 @@ class Solution:
 Given beginWord and endWord, and a wordList, return the length of shortest transformation sequence.
 
 **Examples:**
-- Input: beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log","cog"]
+```markdown
+Input: beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log","cog"]
 Output: 5
+```
 
 **Approach:**
 Use BFS and word pattern adjacency (wildcard transformations) to traverse valid changes.
@@ -1333,8 +1428,10 @@ class Solution:
 Given a 2D board and a word, return true if the word exists in the grid.
 
 **Examples:**
-- Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"
+```markdown
+Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"
 Output: true
+```
 
 **Approach:**
 DFS + backtracking on each cell, mark visited to avoid reuse.
@@ -1371,8 +1468,10 @@ class Solution:
 Given a string, find the length of the longest substring without repeating characters.
 
 **Examples:**
-- Input: s = "abcabcbb"
+```markdown
+Input: s = "abcabcbb"
 Output: 3
+```
 
 **Approach:**
 Use sliding window with set. Move left pointer when duplicate is found.
@@ -1402,8 +1501,10 @@ class Solution:
 Given a string s and an integer k, return the length of the longest substring containing the same letter you can get after performing at most k replacements.
 
 **Examples:**
-- Input: s = "ABAB", k = 2
+```markdown
+Input: s = "ABAB", k = 2
 Output: 4
+```
 
 **Approach:**
 Use sliding window. Track the count of the most frequent character and shrink window when more than k replacements are needed.
@@ -1434,8 +1535,10 @@ class Solution:
 Given two strings s1 and s2, return true if s2 contains a permutation of s1.
 
 **Examples:**
-- Input: s1 = "ab", s2 = "eidbaooo"
+```markdown
+Input: s1 = "ab", s2 = "eidbaooo"
 Output: true
+```
 
 **Approach:**
 Compare character counts in a sliding window of s2 with the count of s1.
@@ -1484,8 +1587,10 @@ class Solution:
 Given strings s and t, return the minimum window in s which contains all the characters in t.
 
 **Examples:**
-- Input: s = "ADOBECODEBANC", t = "ABC"
+```markdown
+Input: s = "ADOBECODEBANC", t = "ABC"
 Output: "BANC"
+```
 
 **Approach:**
 Use sliding window and track character frequencies. Expand until valid, then try shrinking.
@@ -1527,8 +1632,10 @@ class Solution:
 Return all starting indices of p's anagrams in s.
 
 **Examples:**
-- Input: s = "cbaebabacd", p = "abc"
+```markdown
+Input: s = "cbaebabacd", p = "abc"
 Output: [0,6]
+```
 
 **Approach:**
 Use frequency counter and sliding window of same length as p.
@@ -1562,8 +1669,10 @@ class Solution:
 Return the longest palindromic substring in s.
 
 **Examples:**
-- Input: s = "babad"
+```markdown
+Input: s = "babad"
 Output: "bab"
+```
 
 **Approach:**
 Expand around each character and center between two chars. Track max length.
@@ -1594,8 +1703,10 @@ class Solution:
 Return the number of palindromic substrings in s.
 
 **Examples:**
-- Input: s = "abc"
+```markdown
+Input: s = "abc"
 Output: 3
+```
 
 **Approach:**
 Expand around every character and count valid palindromes.
@@ -1628,8 +1739,10 @@ class Solution:
 Design an algorithm to encode a list of strings to a single string, and decode it back.
 
 **Examples:**
-- Input: ["lint","code","love","you"]
+```markdown
+Input: ["lint","code","love","you"]
 Output: same after encode/decode
+```
 
 **Approach:**
 Encode each string with its length followed by a special character (e.g. '#'), then the string. Decode by parsing length and extracting that many characters.
@@ -1662,8 +1775,10 @@ class Codec:
 Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
 
 **Examples:**
-- Input: s = "A man, a plan, a canal: Panama"
+```markdown
+Input: s = "A man, a plan, a canal: Panama"
 Output: true
+```
 
 **Approach:**
 Use two pointers to skip non-alphanumeric characters and compare lowercased letters.
@@ -1695,8 +1810,10 @@ class Solution:
 Return true if the string can be a palindrome after deleting at most one character.
 
 **Examples:**
-- Input: s = "abca"
+```markdown
+Input: s = "abca"
 Output: true
+```
 
 **Approach:**
 Use two pointers. When mismatch occurs, skip either side and check if either half is a palindrome.
@@ -1731,8 +1848,10 @@ class Solution:
 Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
 
 **Examples:**
-- Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]
+```markdown
+Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]
 Output: 6
+```
 
 **Approach:**
 Use two pointers to track left max and right max. Water trapped = min(left_max, right_max) - height[i].
@@ -1768,8 +1887,10 @@ class Solution:
 Given two strings s and t, return true if they are equal when both are typed into empty text editors. '#' means a backspace character.
 
 **Examples:**
-- Input: s = "ab#c", t = "ad#c"
+```markdown
+Input: s = "ab#c", t = "ad#c"
 Output: true
+```
 
 **Approach:**
 Simulate typing with a stack or compare from the end with a skip counter.
@@ -1799,8 +1920,10 @@ class Solution:
 Evaluate the value of an arithmetic expression in Reverse Polish Notation.
 
 **Examples:**
-- Input: tokens = ["2","1","+","3","*"]
+```markdown
+Input: tokens = ["2","1","+","3","*"]
 Output: 9
+```
 
 **Approach:**
 Use a stack. Push operands and apply operations as you go. Handle division carefully.
@@ -1836,8 +1959,10 @@ class Solution:
 Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
 
 **Examples:**
-- Input: n = 3
+```markdown
+Input: n = 3
 Output: ["((()))","(()())","(())()","()(())","()()()"]
+```
 
 **Approach:**
 Use backtracking. Add '(' if open < n. Add ')' if close < open.
@@ -1869,8 +1994,10 @@ class Solution:
 Given a list of daily temperatures, return a list such that each element tells you how many days until a warmer temperature.
 
 **Examples:**
-- Input: temperatures = [73,74,75,71,69,72,76,73]
+```markdown
+Input: temperatures = [73,74,75,71,69,72,76,73]
 Output: [1,1,4,2,1,1,0,0]
+```
 
 **Approach:**
 Use a stack to track indices. For each temp, pop until current is warmer, calculate wait.
@@ -1899,8 +2026,10 @@ class Solution:
 Given target and arrays of position and speed, return the number of car fleets that will arrive at the destination.
 
 **Examples:**
-- Input: target = 12, position = [10,8,0,5,3], speed = [2,4,1,1,3]
+```markdown
+Input: target = 12, position = [10,8,0,5,3], speed = [2,4,1,1,3]
 Output: 3
+```
 
 **Approach:**
 Sort cars by position descending. Compute time to reach target and use stack to merge fleets.
@@ -1928,8 +2057,10 @@ class Solution:
 Given an array of integers heights representing the histogram's bar height, return the area of the largest rectangle in the histogram.
 
 **Examples:**
-- Input: heights = [2,1,5,6,2,3]
+```markdown
+Input: heights = [2,1,5,6,2,3]
 Output: 10
+```
 
 **Approach:**
 Use a stack to track increasing bars. Pop and compute area when current bar is smaller.
@@ -1960,8 +2091,10 @@ class Solution:
 Simulate asteroid collisions. If two meet, smaller explodes; same size both explode. Return remaining asteroids.
 
 **Examples:**
-- Input: asteroids = [5,10,-5]
+```markdown
+Input: asteroids = [5,10,-5]
 Output: [5,10]
+```
 
 **Approach:**
 Use stack. Compare incoming asteroid with top and resolve collisions until stable.
@@ -1994,8 +2127,10 @@ class Solution:
 Given a string s of '(' , ')' and lowercase English characters. Remove the minimum number of parentheses to make the input string valid.
 
 **Examples:**
-- Input: s = "lee(t(c)o)de)"
+```markdown
+Input: s = "lee(t(c)o)de)"
 Output: "lee(t(c)o)de"
+```
 
 **Approach:**
 Use a stack to track indices of open parentheses. Remove unmatched open and close parentheses.
@@ -2029,8 +2164,10 @@ class Solution:
 Given an array of intervals where intervals[i] = [start_i, end_i], merge all overlapping intervals.
 
 **Examples:**
-- Input: intervals = [[1,3],[2,6],[8,10],[15,18]]
+```markdown
+Input: intervals = [[1,3],[2,6],[8,10],[15,18]]
 Output: [[1,6],[8,10],[15,18]]
+```
 
 **Approach:**
 Sort intervals by start. Merge if current start <= previous end.
@@ -2059,8 +2196,10 @@ class Solution:
 Given a list of non-overlapping intervals and a new interval, insert and merge if necessary.
 
 **Examples:**
-- Input: intervals = [[1,3],[6,9]], newInterval = [2,5]
+```markdown
+Input: intervals = [[1,3],[6,9]], newInterval = [2,5]
 Output: [[1,5],[6,9]]
+```
 
 **Approach:**
 Iterate and add intervals before, merging as needed, then add the rest.
@@ -2095,8 +2234,10 @@ class Solution:
 Find the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.
 
 **Examples:**
-- Input: intervals = [[1,2],[2,3],[3,4],[1,3]]
+```markdown
+Input: intervals = [[1,2],[2,3],[3,4],[1,3]]
 Output: 1
+```
 
 **Approach:**
 Sort by end. Greedily select non-overlapping intervals by keeping track of last end.
@@ -2126,8 +2267,10 @@ class Solution:
 Given an array of meeting time intervals, determine if a person could attend all meetings.
 
 **Examples:**
-- Input: intervals = [[0,30],[5,10],[15,20]]
+```markdown
+Input: intervals = [[0,30],[5,10],[15,20]]
 Output: false
+```
 
 **Approach:**
 Sort by start time and check for any overlap.
@@ -2153,8 +2296,10 @@ class Solution:
 Given meeting time intervals, find the minimum number of conference rooms required.
 
 **Examples:**
-- Input: intervals = [[0,30],[5,10],[15,20]]
+```markdown
+Input: intervals = [[0,30],[5,10],[15,20]]
 Output: 2
+```
 
 **Approach:**
 Sort by start time. Use a min-heap to track end times and determine room reuse.
@@ -2182,8 +2327,10 @@ class Solution:
 Merge k sorted linked lists and return it as one sorted list.
 
 **Examples:**
-- Input: [[1,4,5],[1,3,4],[2,6]]
+```markdown
+Input: [[1,4,5],[1,3,4],[2,6]]
 Output: [1,1,2,3,4,4,5,6]
+```
 
 **Approach:**
 Use a heap to keep track of the smallest current node among all lists.
@@ -2217,8 +2364,10 @@ class Solution:
 Design a data structure that supports adding numbers and finding median efficiently.
 
 **Examples:**
-- Input: ["MedianFinder","addNum","addNum","findMedian"], [[],[1],[2],[]]
+```markdown
+Input: ["MedianFinder","addNum","addNum","findMedian"], [[],[1],[2],[]]
 Output: [null,null,null,1.5]
+```
 
 **Approach:**
 Use two heaps: max-heap for lower half and min-heap for upper half. Balance heaps on insert.
@@ -2252,8 +2401,10 @@ class MedianFinder:
 Find the kth largest element in an unsorted array.
 
 **Examples:**
-- Input: nums = [3,2,1,5,6,4], k = 2
+```markdown
+Input: nums = [3,2,1,5,6,4], k = 2
 Output: 5
+```
 
 **Approach:**
 Use a min-heap of size k to maintain the top k elements.
@@ -2275,8 +2426,10 @@ class Solution:
 Given a list of tasks with cooling interval n, find the least number of units of times that the CPU will take to finish all tasks.
 
 **Examples:**
-- Input: tasks = ['A','A','A','B','B','B'], n = 2
+```markdown
+Input: tasks = ['A','A','A','B','B','B'], n = 2
 Output: 8
+```
 
 **Approach:**
 Count task frequencies, use a max heap. Greedily schedule most frequent tasks with idle time.
@@ -2312,8 +2465,10 @@ class Solution:
 Rearrange characters of string so that no two adjacent characters are the same. If not possible, return ''.
 
 **Examples:**
-- Input: s = "aab"
+```markdown
+Input: s = "aab"
 Output: "aba"
+```
 
 **Approach:**
 Use max heap for character frequencies. Alternate characters with highest frequency.
@@ -2351,8 +2506,10 @@ class Solution:
 Find the minimum number of arrows to burst all balloons represented by intervals.
 
 **Examples:**
-- Input: points = [[10,16],[2,8],[1,6],[7,12]]
+```markdown
+Input: points = [[10,16],[2,8],[1,6],[7,12]]
 Output: 2
+```
 
 **Approach:**
 Sort by end of intervals. Greedily shoot arrow at earliest end covering max balloons.
@@ -2381,8 +2538,10 @@ class Solution:
 Find the time it takes for all nodes to receive a signal from node k in a directed, weighted graph.
 
 **Examples:**
-- Input: times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2
+```markdown
+Input: times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2
 Output: 2
+```
 
 **Approach:**
 Use Dijkstra’s algorithm with a min heap to track shortest time to reach all nodes.
@@ -2417,8 +2576,10 @@ class Solution:
 Given a grid of elevations, find the minimum time to reach bottom right such that you can only move when water has risen to that level.
 
 **Examples:**
-- Input: grid = [[0,2],[1,3]]
+```markdown
+Input: grid = [[0,2],[1,3]]
 Output: 3
+```
 
 **Approach:**
 Use Dijkstra's algorithm (min-heap) where the cost is max(height so far, current cell).
@@ -2455,8 +2616,10 @@ class Solution:
 Find the cheapest flight price from src to dst with at most k stops.
 
 **Examples:**
-- Input: n = 3, flights = [[0,1,100],[1,2,100],[0,2,500]], src = 0, dst = 2, k = 1
+```markdown
+Input: n = 3, flights = [[0,1,100],[1,2,100],[0,2,500]], src = 0, dst = 2, k = 1
 Output: 200
+```
 
 **Approach:**
 Use modified Dijkstra or BFS that tracks steps as well as cost.
@@ -2489,8 +2652,10 @@ class Solution:
 Given a graph with weighted edges, return shortest path from source to all nodes.
 
 **Examples:**
-- Input: graph = {0: [(1, 4), (2, 1)], 1: [(3, 1)], 2: [(1, 2), (3, 5)]}, src = 0
+```markdown
+Input: graph = {0: [(1, 4), (2, 1)], 1: [(3, 1)], 2: [(1, 2), (3, 5)]}, src = 0
 Output: {0:0,1:3,2:1,3:4}
+```
 
 **Approach:**
 Use min-heap to pick the closest node at each step and update neighbors.
@@ -2521,8 +2686,10 @@ def dijkstra(graph, start):
 Find shortest distances from a source vertex to all vertices in a weighted graph. Handles negative weights.
 
 **Examples:**
-- Input: edges = [(0,1,4),(0,2,5),(1,2,-3)], n = 3, src = 0
+```markdown
+Input: edges = [(0,1,4),(0,2,5),(1,2,-3)], n = 3, src = 0
 Output: [0,4,1]
+```
 
 **Approach:**
 Relax all edges n-1 times. Detect negative cycle if any edge can still be relaxed.
@@ -2549,8 +2716,10 @@ def bellman_ford(n, edges, src):
 Find shortest paths between all pairs of nodes. Works with negative weights (no negative cycles).
 
 **Examples:**
-- Input: graph = [[0,5,INF],[INF,0,3],[INF,INF,0]]
+```markdown
+Input: graph = [[0,5,INF],[INF,0,3],[INF,INF,0]]
 Output: [[0,5,8],[INF,0,3],[INF,INF,0]]
+```
 
 **Approach:**
 Use DP: dist[i][j] = min(dist[i][j], dist[i][k] + dist[k][j]) for all k.
@@ -2578,8 +2747,10 @@ def floyd_warshall(graph):
 Given coordinates of n points, connect all points with minimum cost (Manhattan distance).
 
 **Examples:**
-- Input: points = [[0,0],[2,2],[3,10],[5,2],[7,0]]
+```markdown
+Input: points = [[0,0],[2,2],[3,10],[5,2],[7,0]]
 Output: 20
+```
 
 **Approach:**
 Use Prim’s algorithm with min-heap to grow the MST.
@@ -2619,8 +2790,10 @@ class Solution:
 In a tree with one extra edge added, find the edge that can be removed so the resulting graph is a tree again.
 
 **Examples:**
-- Input: edges = [[1,2],[1,3],[2,3]]
+```markdown
+Input: edges = [[1,2],[1,3],[2,3]]
 Output: [2,3]
+```
 
 **Approach:**
 Use Union-Find. The edge that connects already-connected nodes is redundant.
@@ -2655,8 +2828,10 @@ class Solution:
 Count how many connected components exist in an undirected graph.
 
 **Examples:**
-- Input: n = 5, edges = [[0,1],[1,2],[3,4]]
+```markdown
+Input: n = 5, edges = [[0,1],[1,2],[3,4]]
 Output: 2
+```
 
 **Approach:**
 Use Union-Find or DFS to track which nodes are connected.
@@ -2688,8 +2863,10 @@ class Solution:
 Given n nodes and edges, return true if the edges form a valid tree.
 
 **Examples:**
-- Input: n = 5, edges = [[0,1],[0,2],[0,3],[1,4]]
+```markdown
+Input: n = 5, edges = [[0,1],[0,2],[0,3],[1,4]]
 Output: true
+```
 
 **Approach:**
 Check that the graph has n-1 edges and is fully connected (DFS or Union-Find).
@@ -2728,8 +2905,10 @@ class Solution:
 Given a list of accounts, merge accounts that have the same email address.
 
 **Examples:**
-- Input: [ ["John", "johnsmith@mail.com", "john00@mail.com"], ["John", "johnnybravo@mail.com"], ["John", "johnsmith@mail.com", "john_newyork@mail.com"], ["Mary", "mary@mail.com"] ]
+```markdown
+Input: [ ["John", "johnsmith@mail.com", "john00@mail.com"], ["John", "johnnybravo@mail.com"], ["John", "johnsmith@mail.com", "john_newyork@mail.com"], ["Mary", "mary@mail.com"] ]
 Output: merged accounts
+```
 
 **Approach:**
 Use Union-Find on emails. Merge sets and reconstruct from components.
@@ -2768,8 +2947,10 @@ class Solution:
 Return the number of land cells from which we cannot walk off the boundary.
 
 **Examples:**
-- Input: grid = [[0,0,0,0],[1,0,1,0],[0,1,1,0],[0,0,0,0]]
+```markdown
+Input: grid = [[0,0,0,0],[1,0,1,0],[0,1,1,0],[0,0,0,0]]
 Output: 3
+```
 
 **Approach:**
 Flood fill boundary-connected lands and count remaining land cells.
@@ -2804,8 +2985,10 @@ class Solution:
 Return the perimeter of the island in the grid. Grid is surrounded by water and contains one island (one or more connected land cells).
 
 **Examples:**
-- Input: grid = [[0,1,0,0],[1,1,1,0],[0,1,0,0],[1,1,0,0]]
+```markdown
+Input: grid = [[0,1,0,0],[1,1,1,0],[0,1,0,0],[1,1,0,0]]
 Output: 16
+```
 
 **Approach:**
 Count all 4 sides for land cells, subtract for each adjacent land neighbor.
@@ -2837,8 +3020,10 @@ class Solution:
 Find all shortest transformation sequences from beginWord to endWord.
 
 **Examples:**
-- Input: beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log","cog"]
+```markdown
+Input: beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log","cog"]
 Output: [["hit","hot","dot","dog","cog"],...]
+```
 
 **Approach:**
 Use BFS to build graph and levels, then backtrack to reconstruct paths.
@@ -2877,8 +3062,10 @@ class Solution:
 Return the minimum number of mutations to transform start gene to end gene using only allowed mutations.
 
 **Examples:**
-- Input: start = "AACCGGTT", end = "AACCGGTA", bank = ["AACCGGTA"]
+```markdown
+Input: start = "AACCGGTT", end = "AACCGGTA", bank = ["AACCGGTA"]
 Output: 1
+```
 
 **Approach:**
 BFS where each gene in the queue represents a state. Mutate one letter at a time and check against the bank.
@@ -2912,7 +3099,9 @@ class Solution:
 Repeat for emphasis: check if edges form a valid tree — no cycles and full connectivity.
 
 **Examples:**
-- Same as Problem 99.
+```markdown
+Same as Problem 99.
+```
 
 **Approach:**
 Reinforced for mastery. Use DFS or Union-Find as needed.
@@ -2930,8 +3119,10 @@ Reinforced for mastery. Use DFS or Union-Find as needed.
 DFS solution to check if the undirected graph is a valid tree.
 
 **Examples:**
-- Input: n = 5, edges = [[0,1],[0,2],[0,3],[1,4]]
+```markdown
+Input: n = 5, edges = [[0,1],[0,2],[0,3],[1,4]]
 Output: True
+```
 
 **Approach:**
 Start from node 0 and explore using DFS. Ensure all nodes are visited and no cycles exist.
@@ -2971,8 +3162,10 @@ class Solution:
 BFS approach to validate a graph is a tree: all nodes connected, no cycles.
 
 **Examples:**
-- Input: n = 5, edges = [[0,1],[0,2],[0,3],[1,4]]
+```markdown
+Input: n = 5, edges = [[0,1],[0,2],[0,3],[1,4]]
 Output: True
+```
 
 **Approach:**
 Use a queue and visited set to traverse from node 0. Return False if a cycle is detected or any node is unvisited.
@@ -3013,8 +3206,10 @@ class Solution:
 Determine whether a graph is bipartite (can color with 2 colors without conflict).
 
 **Examples:**
-- Input: graph = [[1,2,3],[0,2],[0,1,3],[0,2]]
+```markdown
+Input: graph = [[1,2,3],[0,2],[0,1,3],[0,2]]
 Output: False
+```
 
 **Approach:**
 Use BFS and alternate colors for adjacent nodes. If a neighbor has the same color, it's not bipartite.
@@ -3049,8 +3244,10 @@ class Solution:
 Given an undirected star graph represented by its edges, return the center node.
 
 **Examples:**
-- Input: edges = [[1,2],[2,3],[4,2]]
+```markdown
+Input: edges = [[1,2],[2,3],[4,2]]
 Output: 2
+```
 
 **Approach:**
 In a star graph, the center appears in every edge. Check the common node in the first two edges.
@@ -3074,8 +3271,10 @@ class Solution:
 Given an N-ary tree, return its maximum depth.
 
 **Examples:**
-- Input: root = [1,null,3,2,4,null,5,6]
+```markdown
+Input: root = [1,null,3,2,4,null,5,6]
 Output: 3
+```
 
 **Approach:**
 Use DFS to recursively find the max depth of all children and return the max + 1.
@@ -3099,8 +3298,10 @@ class Solution:
 Given an N-ary tree, return its diameter — the length of the longest path between any two nodes.
 
 **Examples:**
-- Input: root = [1,null,2,3,4,null,5,6,null,null,7,8,null,9,10]
+```markdown
+Input: root = [1,null,2,3,4,null,5,6,null,null,7,8,null,9,10]
 Output: 7
+```
 
 **Approach:**
 Use DFS to compute the two largest depths for each node and track the maximum path.
@@ -3136,8 +3337,10 @@ class Solution:
 Flatten a binary tree into a linked list in-place using the right pointers.
 
 **Examples:**
-- Input: root = [1,2,5,3,4,null,6]
+```markdown
+Input: root = [1,2,5,3,4,null,6]
 Output: [1,null,2,null,3,null,4,null,5,null,6]
+```
 
 **Approach:**
 Use post-order DFS to rearrange pointers in-place.
@@ -3171,8 +3374,10 @@ class Solution:
 Connect next pointers in each node of a perfect binary tree.
 
 **Examples:**
-- Input: root = [1,2,3,4,5,6,7]
+```markdown
+Input: root = [1,2,3,4,5,6,7]
 Output: root with next pointers set
+```
 
 **Approach:**
 Use BFS level-order traversal with a queue or connect nodes iteratively level by level.
@@ -3205,8 +3410,10 @@ class Solution:
 Given inorder and postorder traversal of a binary tree, build the tree.
 
 **Examples:**
-- Input: inorder = [9,3,15,20,7], postorder = [9,15,7,20,3]
+```markdown
+Input: inorder = [9,3,15,20,7], postorder = [9,15,7,20,3]
 Output: root of the tree
+```
 
 **Approach:**
 Use recursion by finding the root at the end of postorder and dividing inorder accordingly.
@@ -3234,8 +3441,10 @@ class Solution:
 Determine if a binary tree is height-balanced.
 
 **Examples:**
-- Input: root = [3,9,20,null,null,15,7]
+```markdown
+Input: root = [3,9,20,null,null,15,7]
 Output: True
+```
 
 **Approach:**
 Use post-order DFS to calculate height. Return -1 if imbalance is found.
@@ -3265,8 +3474,10 @@ class Solution:
 Check if a binary tree has a root-to-leaf path summing to a target value.
 
 **Examples:**
-- Input: root = [5,4,8,11,null,13,4,7,2,null,null,null,1], targetSum = 22
+```markdown
+Input: root = [5,4,8,11,null,13,4,7,2,null,null,null,1], targetSum = 22
 Output: True
+```
 
 **Approach:**
 Use DFS to check for remaining sum along each root-to-leaf path.
@@ -3293,8 +3504,10 @@ class Solution:
 Return the values of nodes you can see from the right side of a binary tree.
 
 **Examples:**
-- Input: root = [1,2,3,null,5,null,4]
+```markdown
+Input: root = [1,2,3,null,5,null,4]
 Output: [1,3,4]
+```
 
 **Approach:**
 Use level-order traversal and store the last node value of each level.
@@ -3327,8 +3540,10 @@ class Solution:
 Return the average value of nodes on each level.
 
 **Examples:**
-- Input: root = [3,9,20,null,null,15,7]
+```markdown
+Input: root = [3,9,20,null,null,15,7]
 Output: [3.00000,14.50000,11.00000]
+```
 
 **Approach:**
 Use level-order traversal to compute sum and count of each level, then average.
@@ -3360,8 +3575,10 @@ class Solution:
 Check if two binary trees have the same leaf node values in left-to-right order.
 
 **Examples:**
-- Input: root1 = [3,5,1,6,2,9,8,null,null,7,4], root2 = [3,5,1,6,7,4,2,null,null,null,null,null,null,9,8]
+```markdown
+Input: root1 = [3,5,1,6,2,9,8,null,null,7,4], root2 = [3,5,1,6,7,4,2,null,null,null,null,null,null,9,8]
 Output: True
+```
 
 **Approach:**
 Collect leaves from both trees using DFS and compare the resulting lists.
@@ -3388,8 +3605,10 @@ class Solution:
 Check if two nodes in a binary tree are cousins (same level, different parents).
 
 **Examples:**
-- Input: root = [1,2,3,4], x = 4, y = 3
+```markdown
+Input: root = [1,2,3,4], x = 4, y = 3
 Output: False
+```
 
 **Approach:**
 Use BFS to find depths and parents of both nodes and compare.
@@ -3427,8 +3646,10 @@ class Solution:
 Find the minimum depth from root to the nearest leaf node.
 
 **Examples:**
-- Input: root = [3,9,20,null,null,15,7]
+```markdown
+Input: root = [3,9,20,null,null,15,7]
 Output: 2
+```
 
 **Approach:**
 Use BFS and return the depth when the first leaf node is encountered.
@@ -3458,8 +3679,10 @@ class Solution:
 Return the length of the diameter of the binary tree.
 
 **Examples:**
-- Input: root = [1,2,3,4,5]
+```markdown
+Input: root = [1,2,3,4,5]
 Output: 3
+```
 
 **Approach:**
 Use DFS to compute depth and update diameter during traversal.
@@ -3490,8 +3713,10 @@ class Solution:
 Check if a tree is symmetric around its center.
 
 **Examples:**
-- Input: root = [1,2,2,3,4,4,3]
+```markdown
+Input: root = [1,2,2,3,4,4,3]
 Output: True
+```
 
 **Approach:**
 Use recursive helper to compare left and right subtrees.
@@ -3519,8 +3744,10 @@ class Solution:
 Connect each node to its right node in the same level (non-perfect binary tree).
 
 **Examples:**
-- Input: root = [1,2,3,4,5,null,7]
+```markdown
+Input: root = [1,2,3,4,5,null,7]
 Output: [1,#,2,3,#,4,5,7,#]
+```
 
 **Approach:**
 Use BFS with a queue or dummy node technique for linking.
@@ -3557,8 +3784,10 @@ class Solution:
 Insert a value into a Binary Search Tree (BST) and return the tree's root.
 
 **Examples:**
-- Input: root = [4,2,7,1,3], val = 5
+```markdown
+Input: root = [4,2,7,1,3], val = 5
 Output: [4,2,7,1,3,5]
+```
 
 **Approach:**
 Recursively or iteratively traverse the tree to find the correct location to insert the value.
@@ -3586,8 +3815,10 @@ class Solution:
 You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order. Add the two numbers and return the sum as a linked list.
 
 **Examples:**
-- Input: l1 = [2,4,3], l2 = [5,6,4]
+```markdown
+Input: l1 = [2,4,3], l2 = [5,6,4]
 Output: [7,0,8]
+```
 
 **Approach:**
 Simulate addition digit by digit using a dummy head node and a carry variable.
@@ -3622,8 +3853,10 @@ class Solution:
 Given two sorted arrays, return the median of the two sorted arrays.
 
 **Examples:**
-- Input: nums1 = [1,3], nums2 = [2]
+```markdown
+Input: nums1 = [1,3], nums2 = [2]
 Output: 2.0
+```
 
 **Approach:**
 Use binary search on the smaller array to partition both arrays and find the correct median position.
@@ -3668,8 +3901,10 @@ class Solution:
 Convert a string to a zigzag pattern on a given number of rows and then read line by line.
 
 **Examples:**
-- Input: s = "PAYPALISHIRING", numRows = 3
+```markdown
+Input: s = "PAYPALISHIRING", numRows = 3
 Output: "PAHNAPLSIIGYIR"
+```
 
 **Approach:**
 Simulate row-wise traversal in zigzag fashion and concatenate the result rows.
@@ -3705,8 +3940,10 @@ class Solution:
 Given an array of non-negative integers, determine if you can reach the last index.
 
 **Examples:**
-- Input: nums = [2,3,1,1,4]
+```markdown
+Input: nums = [2,3,1,1,4]
 Output: True
+```
 
 **Approach:**
 Track the furthest reachable index as you iterate through the array.
@@ -3733,8 +3970,10 @@ class Solution:
 Return the minimum number of jumps to reach the end of the array.
 
 **Examples:**
-- Input: nums = [2,3,1,1,4]
+```markdown
+Input: nums = [2,3,1,1,4]
 Output: 2
+```
 
 **Approach:**
 Use greedy window-based strategy to count jumps within current range.
@@ -3762,8 +4001,10 @@ class Solution:
 Given an m x n matrix, if an element is 0, set its entire row and column to 0.
 
 **Examples:**
-- Input: matrix = [[1,1,1],[1,0,1],[1,1,1]]
+```markdown
+Input: matrix = [[1,1,1],[1,0,1],[1,1,1]]
 Output: [[1,0,1],[0,0,0],[1,0,1]]
+```
 
 **Approach:**
 Use first row and column as flags to mark which rows and columns to zero out.
@@ -3804,8 +4045,10 @@ class Solution:
 Return all elements of the matrix in spiral order.
 
 **Examples:**
-- Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
+```markdown
+Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
 Output: [1,2,3,6,9,8,7,4,5]
+```
 
 **Approach:**
 Use four boundary pointers and shrink them inward while traversing the matrix.
@@ -3838,8 +4081,10 @@ class Solution:
 Rotate the image (2D matrix) by 90 degrees clockwise in-place.
 
 **Examples:**
-- Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
+```markdown
+Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
 Output: [[7,4,1],[8,5,2],[9,6,3]]
+```
 
 **Approach:**
 Transpose the matrix then reverse each row.
@@ -3866,8 +4111,10 @@ class Solution:
 Return true if the input string can be segmented into space-separated words in the dictionary.
 
 **Examples:**
-- Input: s = "leetcode", wordDict = ["leet","code"]
+```markdown
+Input: s = "leetcode", wordDict = ["leet","code"]
 Output: True
+```
 
 **Approach:**
 Use dynamic programming to track possible segmentations up to each index.
@@ -3898,8 +4145,10 @@ class Solution:
 Return all possible sentences from the string using words in the dictionary.
 
 **Examples:**
-- Input: s = "catsanddog", wordDict = ["cat","cats","and","sand","dog"]
+```markdown
+Input: s = "catsanddog", wordDict = ["cat","cats","and","sand","dog"]
 Output: ["cats and dog","cat sand dog"]
+```
 
 **Approach:**
 Use backtracking with memoization to build valid word sequences.
@@ -3937,9 +4186,11 @@ class Solution:
 Design a data structure that follows the constraints of a Least Recently Used (LRU) cache.
 
 **Examples:**
-- Input: ["LRUCache","put","put","get","put","get","put","get","get","get"]
+```markdown
+Input: ["LRUCache","put","put","get","put","get","put","get","get","get"]
        [[2],[1,1],[2,2],[1],[3,3],[2],[4,4],[1],[3],[4]]
 Output: [null,null,null,1,null,-1,null,-1,3,4]
+```
 
 **Approach:**
 Use OrderedDict in Python or a hashmap + doubly linked list for O(1) operations.
@@ -3977,9 +4228,11 @@ class LRUCache:
 Design a data structure that follows the constraints of a Least Frequently Used (LFU) cache.
 
 **Examples:**
-- Input: ["LFUCache","put","put","get","put","get","get","put","get","get","get"]
+```markdown
+Input: ["LFUCache","put","put","get","put","get","get","put","get","get","get"]
        [[2],[1,1],[2,2],[1],[3,3],[2],[3],[4,4],[1],[3],[4]]
 Output: [null,null,null,1,null,-1,3,null,-1,3,4]
+```
 
 **Approach:**
 Use two hashmaps to track frequency and values, with an eviction policy based on least freq.
@@ -4039,8 +4292,10 @@ class LFUCache:
 Given an array, find the median of each sliding window of size k.
 
 **Examples:**
-- Input: nums = [1,3,-1,-3,5,3,6,7], k = 3
+```markdown
+Input: nums = [1,3,-1,-3,5,3,6,7], k = 3
 Output: [1,-1,-1,3,5,6]
+```
 
 **Approach:**
 Use two heaps (max-heap and min-heap) to keep balance between lower and upper halves.
@@ -4128,9 +4383,11 @@ class Solution:
 Design a simplified version of Twitter with basic tweet and follow functionalities.
 
 **Examples:**
-- Input: ["Twitter","postTweet","getNewsFeed","follow","getNewsFeed"]
+```markdown
+Input: ["Twitter","postTweet","getNewsFeed","follow","getNewsFeed"]
        [[],[1,5],[1],[1,2],[1]]
 Output: [null,null,[5],null,[5]]
+```
 
 **Approach:**
 Use a global timestamp and per-user heaps for tweet retrieval. Track follow relations with sets.
@@ -4176,8 +4433,10 @@ class Twitter:
 A robot is located at the top-left corner of a m x n grid. How many unique paths are there to reach the bottom-right corner?
 
 **Examples:**
-- Input: m = 3, n = 7
+```markdown
+Input: m = 3, n = 7
 Output: 28
+```
 
 **Approach:**
 Use a 2D DP table or optimized 1D array to compute paths from bottom up.
@@ -4203,8 +4462,10 @@ class Solution:
 A robot is on a grid with obstacles. Compute how many paths exist from top-left to bottom-right avoiding obstacles.
 
 **Examples:**
-- Input: obstacleGrid = [[0,0,0],[0,1,0],[0,0,0]]
+```markdown
+Input: obstacleGrid = [[0,0,0],[0,1,0],[0,0,0]]
 Output: 2
+```
 
 **Approach:**
 Use a 2D DP table accounting for obstacle cells (marked as 1).
@@ -4235,8 +4496,10 @@ class Solution:
 Given two strings word1 and word2, return the minimum number of operations required to convert word1 to word2.
 
 **Examples:**
-- Input: word1 = "horse", word2 = "ros"
+```markdown
+Input: word1 = "horse", word2 = "ros"
 Output: 3
+```
 
 **Approach:**
 Use a 2D DP table with insert, delete, and replace operations.
@@ -4268,8 +4531,10 @@ class Solution:
 Find a path from top-left to bottom-right which minimizes the sum of all numbers along its path.
 
 **Examples:**
-- Input: grid = [[1,3,1],[1,5,1],[4,2,1]]
+```markdown
+Input: grid = [[1,3,1],[1,5,1],[4,2,1]]
 Output: 7
+```
 
 **Approach:**
 Update grid in-place using bottom-up DP to track minimum sum to each cell.
@@ -4299,8 +4564,10 @@ class Solution:
 You are a professional robber planning to rob houses along a street. No two adjacent houses can be robbed.
 
 **Examples:**
-- Input: nums = [2,7,9,3,1]
+```markdown
+Input: nums = [2,7,9,3,1]
 Output: 12
+```
 
 **Approach:**
 Use DP with two choices: rob current house or skip it.
@@ -4325,8 +4592,10 @@ class Solution:
 Houses are arranged in a circle. Cannot rob both the first and last house.
 
 **Examples:**
-- Input: nums = [2,3,2]
+```markdown
+Input: nums = [2,3,2]
 Output: 3
+```
 
 **Approach:**
 Use House Robber logic twice — once excluding first house, once excluding last.
@@ -4357,8 +4626,10 @@ class Solution:
 You are given coins of different denominations. Return the fewest number of coins to make up a given amount.
 
 **Examples:**
-- Input: coins = [1,2,5], amount = 11
+```markdown
+Input: coins = [1,2,5], amount = 11
 Output: 3
+```
 
 **Approach:**
 Use bottom-up DP to fill in minimum coins required for each amount.
@@ -4385,8 +4656,10 @@ class Solution:
 Return all unique combinations in candidates where the candidate numbers sum to target.
 
 **Examples:**
-- Input: candidates = [2,3,6,7], target = 7
+```markdown
+Input: candidates = [2,3,6,7], target = 7
 Output: [[2,2,3],[7]]
+```
 
 **Approach:**
 Use DFS recursion with backtracking to try all valid paths.
@@ -4420,8 +4693,10 @@ class Solution:
 Each number can only be used once. Return all unique combinations summing to target.
 
 **Examples:**
-- Input: candidates = [10,1,2,7,6,1,5], target = 8
+```markdown
+Input: candidates = [10,1,2,7,6,1,5], target = 8
 Output: [[1,1,6],[1,2,5],[1,7],[2,6]]
+```
 
 **Approach:**
 Sort input to skip duplicates. Use backtracking with index increment.
@@ -4458,8 +4733,10 @@ class Solution:
 Partition a string such that every substring is a palindrome. Return all possible results.
 
 **Examples:**
-- Input: s = "aab"
+```markdown
+Input: s = "aab"
 Output: [["a","a","b"],["aa","b"]]
+```
 
 **Approach:**
 Use DFS backtracking and expand partitions where each cut is a palindrome.
@@ -4495,8 +4772,10 @@ class Solution:
 Write an efficient algorithm to search for a target value in a 2D matrix with sorted rows and columns.
 
 **Examples:**
-- Input: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3
+```markdown
+Input: matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3
 Output: true
+```
 
 **Approach:**
 Treat the 2D matrix as a 1D sorted array and perform binary search.
@@ -4531,8 +4810,10 @@ class Solution:
 Search target in a rotated sorted array with no duplicates.
 
 **Examples:**
-- Input: nums = [4,5,6,7,0,1,2], target = 0
+```markdown
+Input: nums = [4,5,6,7,0,1,2], target = 0
 Output: 4
+```
 
 **Approach:**
 Use modified binary search to identify the sorted half and narrow down.
@@ -4569,8 +4850,10 @@ class Solution:
 Find the minimum element in a rotated sorted array with no duplicates.
 
 **Examples:**
-- Input: nums = [3,4,5,1,2]
+```markdown
+Input: nums = [3,4,5,1,2]
 Output: 1
+```
 
 **Approach:**
 Use binary search to find the point of rotation (minimum).
@@ -4599,8 +4882,10 @@ class Solution:
 Search target in a rotated sorted array that may contain duplicates.
 
 **Examples:**
-- Input: nums = [2,5,6,0,0,1,2], target = 0
+```markdown
+Input: nums = [2,5,6,0,0,1,2], target = 0
 Output: true
+```
 
 **Approach:**
 Same as regular rotated binary search, but skip duplicates when needed.
@@ -4640,8 +4925,10 @@ class Solution:
 Implement pow(x, n), which calculates x raised to the power n (x^n).
 
 **Examples:**
-- Input: x = 2.00000, n = 10
+```markdown
+Input: x = 2.00000, n = 10
 Output: 1024.00000
+```
 
 **Approach:**
 Use fast exponentiation by squaring with recursion or iteration.
@@ -4668,8 +4955,10 @@ class Solution:
 Implement a trie with insert, search, and startsWith methods.
 
 **Examples:**
-- Input: ["Trie", "insert", "search", "startsWith"], [[], ["apple"], ["apple"], ["app"]]
+```markdown
+Input: ["Trie", "insert", "search", "startsWith"], [[], ["apple"], ["apple"], ["app"]]
 Output: [null, null, true, true]
+```
 
 **Approach:**
 Use nested dictionaries or node objects to represent children for each character.
@@ -4720,8 +5009,10 @@ class Trie:
 Add and search words with support for wildcard '.' character.
 
 **Examples:**
-- Input: wordDictionary.add("bad"), wordDictionary.search(".ad")
+```markdown
+Input: wordDictionary.add("bad"), wordDictionary.search(".ad")
 Output: true
+```
 
 **Approach:**
 Use Trie and DFS to handle wildcard search.
@@ -4765,8 +5056,10 @@ class WordDictionary:
 Find a peak element and return its index. An element is a peak if it is greater than its neighbors.
 
 **Examples:**
-- Input: nums = [1,2,3,1]
+```markdown
+Input: nums = [1,2,3,1]
 Output: 2
+```
 
 **Approach:**
 Binary search using mid comparison with mid+1 to guide direction.
@@ -4795,8 +5088,10 @@ class Solution:
 Given an integer array, return a list of the counts of smaller numbers to the right of each element.
 
 **Examples:**
-- Input: nums = [5,2,6,1]
+```markdown
+Input: nums = [5,2,6,1]
 Output: [2,1,1,0]
+```
 
 **Approach:**
 Use modified merge sort to count during the merge step.
@@ -4841,8 +5136,10 @@ class Solution:
 Given a binary matrix, find the largest square containing only 1's and return its area.
 
 **Examples:**
-- Input: matrix = [["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]
+```markdown
+Input: matrix = [["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]
 Output: 4
+```
 
 **Approach:**
 DP with state representing size of square ending at current cell.
@@ -4876,8 +5173,10 @@ class Solution:
 Given a 2D binary matrix filled with 0's and 1's, find the largest rectangle containing only 1's and return its area.
 
 **Examples:**
-- Input: matrix = [["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]
+```markdown
+Input: matrix = [["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]
 Output: 6
+```
 
 **Approach:**
 Convert each row into a histogram and apply Largest Rectangle in Histogram.
@@ -4922,8 +5221,10 @@ class Solution:
 Given two strings s and t, return the number of distinct subsequences of s which equals t.
 
 **Examples:**
-- Input: s = "rabbbit", t = "rabbit"
+```markdown
+Input: s = "rabbbit", t = "rabbit"
 Output: 3
+```
 
 **Approach:**
 Use 2D DP array where dp[i][j] represents number of ways s[0..i] can form t[0..j].
@@ -4955,8 +5256,10 @@ class Solution:
 Determine if one string is a scramble of another string.
 
 **Examples:**
-- Input: s1 = "great", s2 = "rgeat"
+```markdown
+Input: s1 = "great", s2 = "rgeat"
 Output: true
+```
 
 **Approach:**
 Use recursion with memoization to test all possible split points.
@@ -4994,8 +5297,10 @@ class Solution:
 Implement regular expression matching with support for '.' and '*'.
 
 **Examples:**
-- Input: s = "aa", p = "a*"
+```markdown
+Input: s = "aa", p = "a*"
 Output: true
+```
 
 **Approach:**
 DP where dp[i][j] means s[:i] matches p[:j]. Handle '*' separately.
@@ -5028,8 +5333,10 @@ class Solution:
 Implement wildcard matching with support for '?' and '*'.
 
 **Examples:**
-- Input: s = "adceb", p = "*a*b"
+```markdown
+Input: s = "adceb", p = "*a*b"
 Output: true
+```
 
 **Approach:**
 Use 2D DP where '*' can match empty or multiple characters.
@@ -5062,10 +5369,12 @@ class Solution:
 Design a hit counter which counts the number of hits received in the past 5 minutes.
 
 **Examples:**
-- hitCounter.hit(1)
+```markdown
+hitCounter.hit(1)
 hitCounter.hit(2)
 hitCounter.hit(3)
 hitCounter.getHits(4) -> 3
+```
 
 **Approach:**
 Use a queue to store timestamps and discard old ones outside the 5-minute window.
@@ -5096,8 +5405,10 @@ class HitCounter:
 Given a list of directory info, return all groups of duplicate files in the file system.
 
 **Examples:**
-- Input: ["root/a 1.txt(abcd) 2.txt(efgh)", "root/c 3.txt(abcd)", "root/c/d 4.txt(efgh)", "root 4.txt(efgh)"]
+```markdown
+Input: ["root/a 1.txt(abcd) 2.txt(efgh)", "root/c 3.txt(abcd)", "root/c/d 4.txt(efgh)", "root 4.txt(efgh)"]
 Output: [["root/a/1.txt","root/c/3.txt"],["root/a/2.txt","root/c/d/4.txt","root/4.txt"]]
+```
 
 **Approach:**
 Use a hashmap to map file content to a list of paths.
@@ -5127,8 +5438,10 @@ class Solution:
 Find the longest increasing path in a matrix.
 
 **Examples:**
-- Input: matrix = [[9,9,4],[6,6,8],[2,1,1]]
+```markdown
+Input: matrix = [[9,9,4],[6,6,8],[2,1,1]]
 Output: 4
+```
 
 **Approach:**
 Use DFS with memoization from each cell.
@@ -5167,9 +5480,11 @@ class Solution:
 Design a Snake game on a board with food and self-collision detection.
 
 **Examples:**
-- snake.move("R") -> 0
+```markdown
+snake.move("R") -> 0
 snake.move("D") -> 0
 snake.move("R") -> 1
+```
 
 **Approach:**
 Use deque to simulate the snake body, and a set to track collision.
@@ -5216,8 +5531,10 @@ class SnakeGame:
 There are n people at a party. A celebrity is known by everyone but knows no one. Find the celebrity.
 
 **Examples:**
-- Input: knows(a, b) returns True if a knows b
+```markdown
+Input: knows(a, b) returns True if a knows b
 Output: index of celebrity or -1
+```
 
 **Approach:**
 Eliminate non-celebrities using the knows() relation.
@@ -5246,8 +5563,10 @@ class Solution:
 Given a string num and a target, return all expressions by adding '+', '-', or '*' so that they evaluate to target.
 
 **Examples:**
-- Input: num = "123", target = 6
+```markdown
+Input: num = "123", target = 6
 Output: ["1+2+3", "1*2*3"]
+```
 
 **Approach:**
 Backtrack by trying all possible splits and operators. Handle precedence for '*'.
@@ -5289,7 +5608,8 @@ class Solution:
 Write a SQL query to combine two tables: `Person` and `Address`. Return all the people, and their address if available.
 
 **Examples:**
-- Input:
+```markdown
+Input:
 Person table:
 | PersonId | FirstName | LastName |
 |----------|-----------|----------|
@@ -5306,6 +5626,7 @@ Output:
 |-----------|----------|----------|-------|
 | Wang      | Allen    | null     | null  |
 | Alice     | Bob      | New York | NY    |
+```
 
 **Approach:**
 Use a LEFT JOIN between `Person` and `Address` on `PersonId`.
@@ -5328,7 +5649,8 @@ ON Person.PersonId = Address.PersonId;
 Write a SQL query to get the second highest salary from the Employee table.
 
 **Examples:**
-- Input:
+```markdown
+Input:
 | Id | Salary |
 |----|--------|
 | 1  | 100    |
@@ -5339,6 +5661,7 @@ Output:
 | SecondHighestSalary |
 |---------------------|
 | 200                 |
+```
 
 **Approach:**
 Use a subquery to find the max salary less than the maximum salary.
@@ -5362,8 +5685,11 @@ WHERE Salary < (
 Write a SQL query to get the N-th highest salary from the Employee table.
 
 **Examples:**
-- If N = 2, return the second highest salary.
-- Input:
+```markdown
+If N = 2, return the second highest salary.
+```
+```markdown
+Input:
 | Id | Salary |
 |----|--------|
 | 1  | 100    |
@@ -5374,6 +5700,7 @@ Output:
 | getNthHighestSalary(2) |
 |------------------------|
 | 200                    |
+```
 
 **Approach:**
 Use DENSE_RANK or LIMIT with OFFSET depending on the SQL dialect.
@@ -5401,7 +5728,8 @@ END
 Write a SQL query to rank scores in descending order. If there is a tie, they should have the same rank.
 
 **Examples:**
-- Input:
+```markdown
+Input:
 | Id | Score |
 |----|-------|
 | 1  | 3.50  |
@@ -5418,6 +5746,7 @@ Output:
 | 3.85  | 2    |
 | 3.65  | 3    |
 | 3.50  | 4    |
+```
 
 **Approach:**
 Use `DENSE_RANK()` over an `ORDER BY` clause.
@@ -5438,7 +5767,8 @@ FROM Scores;
 Write a SQL query to find the employees who earn the highest salary in each department.
 
 **Examples:**
-- Input:
+```markdown
+Input:
 | Id | Name | Salary | DepartmentId |
 |----|------|--------|---------------|
 | 1  | Joe  | 85000  | 1             |
@@ -5458,6 +5788,7 @@ Output:
 |------------|----------|--------|
 | IT         | Max      | 90000  |
 | Sales      | Henry    | 80000  |
+```
 
 **Approach:**
 Use a subquery or window function to partition by department and get max salary.
@@ -5484,7 +5815,8 @@ WHERE (e.Salary, e.DepartmentId) IN (
 Write a SQL query to find all duplicate emails in the Email table.
 
 **Examples:**
-- Input:
+```markdown
+Input:
 | Id | Email            |
 |----|------------------|
 | 1  | a@leetcode.com   |
@@ -5495,6 +5827,7 @@ Output:
 | Email          |
 |----------------|
 | a@leetcode.com |
+```
 
 **Approach:**
 Group by Email and use `HAVING COUNT(*) > 1`.
@@ -5517,7 +5850,8 @@ HAVING COUNT(*) > 1;
 Write a SQL query to find all customers who never placed an order.
 
 **Examples:**
-- Input:
+```markdown
+Input:
 Customers:
 | Id | Name    |
 |----|---------|
@@ -5537,6 +5871,7 @@ Output:
 |-----------|
 | Henry     |
 | Max       |
+```
 
 **Approach:**
 Use `LEFT JOIN` or `NOT IN` to filter out customers with no matching orders.
@@ -5560,7 +5895,8 @@ WHERE Id NOT IN (
 Write a SQL query to find employees who earn more than their managers.
 
 **Examples:**
-- Input:
+```markdown
+Input:
 | Id | Name | Salary | ManagerId |
 |----|------|--------|-----------|
 | 1  | Joe  | 70000  | 3         |
@@ -5572,6 +5908,7 @@ Output:
 | Employee |
 |----------|
 | Henry    |
+```
 
 **Approach:**
 Self join the Employee table to compare salary with manager.
@@ -5594,7 +5931,8 @@ WHERE e1.Salary > e2.Salary;
 Find transactions that occur more than once with same details.
 
 **Examples:**
-- Input:
+```markdown
+Input:
 | id | amount | account |
 |----|--------|---------|
 | 1  | 1000   | 1234    |
@@ -5605,6 +5943,7 @@ Output:
 | amount | account |
 |--------|---------|
 | 1000   | 1234    |
+```
 
 **Approach:**
 Group by relevant columns and filter with `HAVING COUNT(*) > 1`.
@@ -5627,7 +5966,8 @@ HAVING COUNT(*) > 1;
 Delete all duplicate email entries, keeping only the smallest Id.
 
 **Examples:**
-- Input:
+```markdown
+Input:
 | Id | Email          |
 |----|----------------|
 | 1  | john@example.com |
@@ -5637,6 +5977,7 @@ Output:
 | Id | Email          |
 |----|----------------|
 | 1  | john@example.com |
+```
 
 **Approach:**
 Use a subquery to retain the minimum Id and delete the rest.
@@ -5661,7 +6002,8 @@ WHERE Id NOT IN (
 Find all numbers that appear at least three times consecutively in a table.
 
 **Examples:**
-- Input:
+```markdown
+Input:
 | Id | Num |
 |----|-----|
 | 1  | 1   |
@@ -5676,6 +6018,7 @@ Output:
 | ConsecutiveNums |
 |-----------------|
 | 1               |
+```
 
 **Approach:**
 Use self-joins or window functions like `LEAD()` and `LAG()` to compare neighboring rows.
@@ -5699,7 +6042,8 @@ WHERE l1.Id = l2.Id - 1
 Rearrange seats such that students sitting in even-numbered seats switch places with adjacent odd-numbered seats.
 
 **Examples:**
-- Input:
+```markdown
+Input:
 | id | student |
 |----|---------|
 | 1  | A       |
@@ -5714,6 +6058,7 @@ Output:
 | 2  | A       |
 | 3  | D       |
 | 4  | C       |
+```
 
 **Approach:**
 Use CASE logic with modulo arithmetic to adjust IDs for sorting.
@@ -5742,7 +6087,8 @@ ORDER BY id;
 Find all dates where the temperature was higher than the previous day.
 
 **Examples:**
-- Input:
+```markdown
+Input:
 | Id | RecordDate | Temperature |
 |----|------------|-------------|
 | 1  | 2020-01-01 | 10          |
@@ -5752,6 +6098,7 @@ Output:
 | Id |
 |----|
 | 2  |
+```
 
 **Approach:**
 Self join the table with itself and compare dates and temperatures.
@@ -5775,7 +6122,8 @@ WHERE w1.Temperature > w2.Temperature;
 Find employees with missing salary or name information.
 
 **Examples:**
-- Input:
+```markdown
+Input:
 | empId | name  |
 |-------|--------|
 | 1     | John   |
@@ -5793,6 +6141,7 @@ Output:
 |-------|
 | 2     |
 | 3     |
+```
 
 **Approach:**
 Use JOIN and check for NULL values, or use `UNION` of separate NULL queries.
@@ -5815,7 +6164,8 @@ WHERE e1.name IS NULL OR e2.salary IS NULL;
 Find employees who have worked on more than one project.
 
 **Examples:**
-- Input:
+```markdown
+Input:
 | project_id | employee_id |
 |------------|-------------|
 | 1          | 1           |
@@ -5826,6 +6176,7 @@ Output:
 | employee_id |
 |-------------|
 | 1           |
+```
 
 **Approach:**
 Group by employee_id and count distinct project_ids.
@@ -5848,7 +6199,8 @@ HAVING COUNT(DISTINCT project_id) > 1;
 Write a SQL query to find all movies with odd IDs and a rating greater than 5.0.
 
 **Examples:**
-- Input:
+```markdown
+Input:
 | id | name    | rating |
 |----|---------|--------|
 | 1  | War     | 8.9    |
@@ -5861,6 +6213,7 @@ Output:
 |----|-------|--------|
 | 1  | War   | 8.9    |
 | 3  | fiction| 9.0   |
+```
 
 **Approach:**
 Filter where `id % 2 = 1` and rating > 5.
@@ -5883,7 +6236,8 @@ ORDER BY rating DESC;
 Write a query to find the first login date for each player.
 
 **Examples:**
-- Input:
+```markdown
+Input:
 | player_id | event_date | games_played |
 |-----------|------------|---------------|
 | 1         | 2016-03-01 | 5             |
@@ -5898,6 +6252,7 @@ Output:
 | 1         | 2016-03-01  |
 | 2         | 2017-06-25  |
 | 3         | 2016-03-02  |
+```
 
 **Approach:**
 Use GROUP BY and MIN(event_date) to get the first login.
@@ -5919,11 +6274,13 @@ GROUP BY player_id;
 Write a SQL query to find the user’s first login date and whether they played again the next day.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | player_id | device_id | first_login | second_day_login |
 |-----------|-----------|-------------|------------------|
 | 1         | 2         | 2016-03-01  | 1                |
 | 2         | 3         | 2017-06-25  | 0                |
+```
 
 **Approach:**
 Use self join or `EXISTS` to check for activity on the next day.
@@ -5952,7 +6309,8 @@ WHERE a.event_date = (
 Find the customer who placed the most number of orders.
 
 **Examples:**
-- Input:
+```markdown
+Input:
 | customer_number | order_number |
 |------------------|---------------|
 | 1                | 10            |
@@ -5963,6 +6321,7 @@ Output:
 | customer_number |
 |-----------------|
 | 1               |
+```
 
 **Approach:**
 Group by customer_number and order by COUNT(*) DESC LIMIT 1.
@@ -5986,7 +6345,8 @@ LIMIT 1;
 Find employees whose salary is either less than 100 or more than 100000.
 
 **Examples:**
-- Input:
+```markdown
+Input:
 | employee_id | salary |
 |--------------|--------|
 | 1            | 95     |
@@ -5998,6 +6358,7 @@ Output:
 |--------------|
 | 1           |
 | 3           |
+```
 
 **Approach:**
 Simple WHERE clause using `OR` for invalid salary bounds.
@@ -6019,11 +6380,13 @@ WHERE salary < 100 OR salary > 100000;
 Find the highest salary for each department and the employee(s) who earn it.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | Department | Employee | Salary |
 |------------|----------|--------|
 | IT         | Max      | 90000  |
 | Sales      | Joe      | 80000  |
+```
 
 **Approach:**
 Join Employee and Department tables. Use subquery to filter employees with the max salary per department.
@@ -6050,7 +6413,8 @@ WHERE (e.departmentId, e.salary) IN (
 Write a SQL query to delete all duplicate email entries in a table, keeping only the smallest id.
 
 **Examples:**
-- Input:
+```markdown
+Input:
 | Id | Email             |
 |----|--------------------|
 | 1  | john@example.com  |
@@ -6062,6 +6426,7 @@ Output:
 |----|--------------------|
 | 1  | john@example.com  |
 | 2  | bob@example.com   |
+```
 
 **Approach:**
 Use DELETE with a subquery to filter IDs not equal to MIN(Id) per email.
@@ -6086,7 +6451,8 @@ WHERE Id NOT IN (
 Rank student scores, with ties receiving the same rank and next rank skipped.
 
 **Examples:**
-- Input:
+```markdown
+Input:
 | Id | Score |
 |----|-------|
 | 1  | 87    |
@@ -6099,6 +6465,7 @@ Output:
 | 92    | 1    |
 | 89    | 2    |
 | 87    | 3    |
+```
 
 **Approach:**
 Use `RANK()` over `ORDER BY Score DESC`.
@@ -6119,13 +6486,15 @@ FROM Scores;
 Return the Nth highest salary from a table.
 
 **Examples:**
-- Input:
+```markdown
+Input:
 N = 2
 
 Output:
 | getNthHighestSalary(2) |
 |------------------------|
 | 200                    |
+```
 
 **Approach:**
 Use `DISTINCT`, `ORDER BY` with `LIMIT` and `OFFSET`, or `DENSE_RANK()`.
@@ -6153,11 +6522,13 @@ END;
 Identify consecutive available seats in a row of a cinema.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | seat_id |
 |---------|
 | 2       |
 | 3       |
+```
 
 **Approach:**
 Use `LEAD()` and `LAG()` to check if neighbor seats are also available.
@@ -6185,10 +6556,12 @@ WHERE is_available = 1 AND (prev = 1 OR next = 1);
 Find employees who earn more than their manager.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | Employee |
 |----------|
 | Joe      |
+```
 
 **Approach:**
 Self join on managerId and compare salaries.
@@ -6211,10 +6584,12 @@ WHERE e1.salary > e2.salary;
 Write a SQL query to get the second highest salary from the Employee table.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | SecondHighestSalary |
 |----------------------|
 | 200                  |
+```
 
 **Approach:**
 Use `DISTINCT`, `ORDER BY`, `LIMIT 1 OFFSET 1`.
@@ -6239,10 +6614,12 @@ SELECT (
 Find all duplicate emails in a table.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | Email           |
 |-----------------|
 | john@example.com|
+```
 
 **Approach:**
 Group by Email and use `HAVING COUNT(*) > 1`.
@@ -6265,10 +6642,12 @@ HAVING COUNT(*) > 1;
 Identify customers who visited but made no transactions.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | customer_id |
 |-------------|
 | 2           |
+```
 
 **Approach:**
 Use `LEFT JOIN` and filter where transaction_id IS NULL.
@@ -6291,11 +6670,13 @@ WHERE t.transaction_id IS NULL;
 Summarize total units sold per product.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | product_name | unit |
 |--------------|------|
 | Keyboard     | 10   |
 | Mouse        | 15   |
+```
 
 **Approach:**
 JOIN Product and Sales, GROUP BY product_id, and SUM(units).
@@ -6318,11 +6699,13 @@ GROUP BY s.product_id;
 Find top 3 highest salaries in each department.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | Department | Employee | Salary |
 |------------|----------|--------|
 | IT         | Max      | 90000  |
 | IT         | Jim      | 85000  |
+```
 
 **Approach:**
 Use DENSE_RANK partitioned by departmentId and filter for rank ≤ 3.
@@ -6348,10 +6731,12 @@ WHERE rk <= 3;
 List employees missing either their name or salary record.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | employee_id |
 |-------------|
 | 2           |
+```
 
 **Approach:**
 Use `FULL OUTER JOIN` or simulate it with `UNION` of left/right joins.
@@ -6377,10 +6762,12 @@ WHERE employee_id NOT IN (SELECT employee_id FROM Employees);
 Count number of employees per project.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | project_id | employee_count |
 |------------|----------------|
 | 1          | 2              |
+```
 
 **Approach:**
 GROUP BY project_id and COUNT employee_id.
@@ -6402,10 +6789,12 @@ GROUP BY project_id;
 Find employees who worked on the most projects.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | employee_id | project_count |
 |-------------|----------------|
 | 1           | 3              |
+```
 
 **Approach:**
 Use GROUP BY and HAVING with subquery for MAX(project count).
@@ -6434,10 +6823,12 @@ HAVING COUNT(project_id) = (
 Find the customer who placed the most orders.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | customer_number |
 |------------------|
 | 2                |
+```
 
 **Approach:**
 GROUP BY customer_number, ORDER BY COUNT(*) DESC LIMIT 1.
@@ -6461,8 +6852,10 @@ LIMIT 1;
 Summarize number of transactions per month and country.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | month | country | transactions_count |
+```
 
 **Approach:**
 Use `DATE_FORMAT()` to group by month and country.
@@ -6487,8 +6880,10 @@ GROUP BY month, country;
 Compute transactions and approved percentages by country per month.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | month | approved_amount | approved_count | country |
+```
 
 **Approach:**
 Use `SUM(CASE...)` for conditionals and `DATE_FORMAT` for month.
@@ -6514,10 +6909,12 @@ GROUP BY month, country;
 Calculate the percentage of immediate food deliveries.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | immediate_percentage |
 |-----------------------|
 | 50.00                 |
+```
 
 **Approach:**
 Count where `order_date = customer_pref_delivery_date` and divide by total.
@@ -6542,10 +6939,12 @@ FROM Delivery;
 Calculate immediate delivery percentage for first orders only.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | immediate_percentage |
 |-----------------------|
 | 33.33                 |
+```
 
 **Approach:**
 Find first order per customer and check if delivered on preferred date.
@@ -6575,10 +6974,12 @@ WHERE (customer_id, order_date) IN (
 Compute the average price per product sold.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | product_id | average_price |
 |------------|----------------|
 | 1          | 100.00         |
+```
 
 **Approach:**
 Use `SUM(price * units)/SUM(units)` formula.
@@ -6604,10 +7005,12 @@ GROUP BY p.product_id;
 Get total units sold per product.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | product_id | total_units |
 |------------|-------------|
 | 1          | 450         |
+```
 
 **Approach:**
 JOIN products with sales, GROUP BY product_id, SUM units.
@@ -6630,10 +7033,12 @@ GROUP BY p.product_id;
 Find most recent sale date and total revenue per product.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | product_id | total_revenue | last_sale |
 |------------|----------------|------------|
 | 1          | 50000          | 2022-05-01 |
+```
 
 **Approach:**
 GROUP BY product_id, use MAX() and SUM() functions.
@@ -6658,10 +7063,12 @@ GROUP BY s.product_id;
 Find top selling product(s) by total revenue in each year.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | year | product_id | total_revenue |
 |------|------------|----------------|
 | 2022 | 2          | 76000          |
+```
 
 **Approach:**
 Use `RANK()` or `DENSE_RANK()` within year partitions.
@@ -6695,10 +7102,12 @@ WHERE rk = 1;
 List employees who earn more than their managers.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | name |
 |------|
 | Joe  |
+```
 
 **Approach:**
 Self-join Employee table and compare salaries.
@@ -6721,10 +7130,12 @@ WHERE e.salary > m.salary;
 Find the second highest distinct salary.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | SecondHighestSalary |
 |----------------------|
 | 200                  |
+```
 
 **Approach:**
 Use a subquery with `DISTINCT` and `LIMIT`/`OFFSET`.
@@ -6749,8 +7160,10 @@ SELECT (
 Return the nth highest salary (or null if not exists).
 
 **Examples:**
-- Input: n = 3
+```markdown
+Input: n = 3
 Output: 150
+```
 
 **Approach:**
 Use `DENSE_RANK()` or `ROW_NUMBER()` to find nth.
@@ -6778,10 +7191,12 @@ END
 Find all duplicate emails in the Person table.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | Email |
 |-------|
 | a@b.com |
+```
 
 **Approach:**
 GROUP BY email and use HAVING COUNT(*) > 1.
@@ -6804,10 +7219,12 @@ HAVING COUNT(*) > 1;
 Find 3 or more consecutive rows with same number.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | ConsecutiveNums |
 |------------------|
 | 1                |
+```
 
 **Approach:**
 Use LEAD/LAG or self join on id offsets.
@@ -6831,10 +7248,12 @@ WHERE l1.id = l2.id - 1
 List all customers who have never placed an order.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | name |
 |------|
 | Henry |
+```
 
 **Approach:**
 LEFT JOIN Customer and Orders, filter NULL order_id.
@@ -6857,10 +7276,12 @@ WHERE o.id IS NULL;
 Find dates when temperature rose compared to previous day.
 
 **Examples:**
-- Output:
+```markdown
+Output:
 | Id |
 |----|
 | 2  |
+```
 
 **Approach:**
 Join on previous day and compare temperatures.
@@ -6872,5 +7293,4 @@ FROM Weather w1
 JOIN Weather w2 ON DATEDIFF(w1.recordDate, w2.recordDate) = 1
 WHERE w1.temperature > w2.temperature;
 ```
-
 
