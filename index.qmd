@@ -1,0 +1,43 @@
+---
+title: "Neetcode Python & SQL Problems"
+format:
+  html:
+    toc: true
+    code-fold: true
+    page-layout: full
+    smooth-scroll: true
+---
+
+# Neetcode Study Guide
+
+This study guide compiles essential **Python** and **SQL** problems from Neetcode.  
+It’s organized for fast reference and practice, with detailed explanations and code snippets you can fold/unfold as needed.
+
+---
+
+## 📂 Sections
+
+- [Python Problems](Neetcode Python and SQL Problems.qmd#python-problems)  
+  Covers array, string, dynamic programming, graph, and other common coding interview questions with solutions.
+
+- [SQL Problems](Neetcode Python and SQL Problems.qmd#sql-problems)  
+  Includes SELECT queries, joins, window functions, aggregations, and advanced interview-style problems.
+
+---
+
+## 🎯 How to Use
+
+- Expand code blocks using the **“Code”** toggle to reveal Python or SQL solutions.  
+- Use the **table of contents** on the left to jump directly to topics.  
+- Pair this guide with hands-on practice in LeetCode/SQL platforms.
+
+---
+
+## 🔗 Resources
+
+- **Neetcode Website:** [https://neetcode.io/](https://neetcode.io/)  
+- **LeetCode Practice:** [https://leetcode.com/](https://leetcode.com/)  
+
+---
+
+🚀 *Happy grinding!*
