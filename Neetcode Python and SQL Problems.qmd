@@ -173,7 +173,6 @@ class Solution:
 `` `
 ```
 
-### Problem 6: Valid Anagram
 
 **Category/Pattern:** Arrays & Hashing
 
@@ -200,7 +199,6 @@ class Solution:
 `` `
 ```
 
-### Problem 7: Group Anagrams
 
 **Category/Pattern:** Arrays & Hashing
 
@@ -231,7 +229,6 @@ class Solution:
 `` `
 ```
 
-### Problem 8: Product of Array Except Self
 
 **Category/Pattern:** Arrays & Hashing
 
@@ -343,7 +340,6 @@ def search(nums, target):
 `` `
 ```
 
-### Problem 3: Find Minimum in Rotated Sorted Array
 
 **Category/Pattern:** Binary Search
 
@@ -381,7 +377,6 @@ def findMin(nums):
 `` `
 ```
 
-### Problem 4: Search in Rotated Sorted Array
 
 **Category/Pattern:** Binary Search
 
@@ -427,7 +422,6 @@ def search(nums, target):
 `` `
 ```
 
-### Problem 5: Search in Rotated Sorted Array
 
 **Category/Pattern:** Binary Search
 
@@ -471,7 +465,6 @@ def search(nums, target):
 `` `
 ```
 
-### Problem 6: Find Minimum in Rotated Sorted Array
 
 **Category/Pattern:** Binary Search
 
@@ -509,7 +502,6 @@ def findMin(nums):
 `` `
 ```
 
-### Problem 7: Search in Rotated Sorted Array
 
 **Category/Pattern:** Binary Search
 
@@ -945,7 +937,6 @@ def wordBreak(s, wordDict):
 `` `
 ```
 
-### Problem 8: Unique Paths
 
 **Category/Pattern:** Dynamic Programming
 
@@ -975,7 +966,6 @@ def uniquePaths(m, n):
 `` `
 ```
 
-### Problem 9: Unique Paths II
 
 **Category/Pattern:** Dynamic Programming
 
@@ -1051,7 +1041,6 @@ def minDistance(word1, word2):
 `` `
 ```
 
-### Problem 11: Unique Paths
 
 **Category/Pattern:** Dynamic Programming
 
@@ -1147,7 +1136,6 @@ def lengthOfLIS(nums):
 `` `
 ```
 
-### Problem 14: Word Break
 
 **Category/Pattern:** Dynamic Programming
 
@@ -1593,7 +1581,6 @@ def merge(intervals):
 `` `
 ```
 
-### Problem 6: Merge Intervals
 
 **Category/Pattern:** Intervals
 
@@ -1627,7 +1614,6 @@ class Solution:
 `` `
 ```
 
-### Problem 7: Insert Interval
 
 **Category/Pattern:** Intervals
 
@@ -1664,7 +1650,6 @@ class Solution:
 `` `
 ```
 
-### Problem 8: Non-overlapping Intervals
 
 **Category/Pattern:** Intervals
 
@@ -1859,7 +1844,6 @@ class Solution:
 `` `
 ```
 
-### Problem 5: LRU Cache
 
 **Category/Pattern:** Linked List
 
@@ -2495,7 +2479,6 @@ def findMin(nums):
 `` `
 ```
 
-### Problem 10: Time Based Key-Value Store
 
 **Category/Pattern:** Misc
 
@@ -2541,7 +2524,6 @@ class TimeMap:
 `` `
 ```
 
-### Problem 11: Median of Two Sorted Arrays
 
 **Category/Pattern:** Misc
 
@@ -2590,7 +2572,6 @@ def findMedianSortedArrays(nums1, nums2):
 `` `
 ```
 
-### Problem 12: Koko Eating Bananas
 
 **Category/Pattern:** Misc
 
@@ -2742,7 +2723,6 @@ def findPeakElement(nums):
 `` `
 ```
 
-### Problem 16: Search a 2D Matrix
 
 **Category/Pattern:** Misc
 
@@ -3097,7 +3077,6 @@ class Solution:
 `` `
 ```
 
-### Problem 27: Top K Frequent Elements
 
 **Category/Pattern:** Misc
 
@@ -3192,7 +3171,6 @@ class Solution:
 `` `
 ```
 
-### Problem 30: Median of Two Sorted Arrays
 
 **Category/Pattern:** Misc
 
@@ -3245,7 +3223,6 @@ def findMedianSortedArrays(nums1, nums2):
 `` `
 ```
 
-### Problem 31: Time Based Key-Value Store
 
 **Category/Pattern:** Misc
 
@@ -3288,7 +3265,6 @@ class TimeMap:
 `` `
 ```
 
-### Problem 32: Koko Eating Bananas
 
 **Category/Pattern:** Misc
 
@@ -3619,7 +3595,6 @@ class Twitter:
 `` `
 ```
 
-### Problem 40: Minimum Path Sum
 
 **Category/Pattern:** Misc
 
@@ -3725,7 +3700,6 @@ def numDecodings(s):
 `` `
 ```
 
-### Problem 43: Minimum Path Sum
 
 **Category/Pattern:** Misc
 
@@ -3996,7 +3970,6 @@ class MedianFinder:
 `` `
 ```
 
-### Problem 49: LFU Cache
 
 **Category/Pattern:** Misc
 
@@ -5135,7 +5108,6 @@ class Codec:
 `` `
 ```
 
-### Problem 2: Encode and Decode Strings
 
 **Category/Pattern:** Strings
 
@@ -5427,7 +5399,6 @@ def diameterOfBinaryTree(root):
 `` `
 ```
 
-### Problem 8: Maximum Depth of Binary Tree
 
 **Category/Pattern:** Trees
 
@@ -5488,7 +5459,6 @@ def isBalanced(root):
 `` `
 ```
 
-### Problem 10: Same Tree
 
 **Category/Pattern:** Trees
 
@@ -5821,7 +5791,6 @@ class Solution:
 `` `
 ```
 
-### Problem 6: Longest Palindromic Substring
 
 **Category/Pattern:** Two Pointers
 
@@ -7860,4 +7829,3 @@ FROM RankedSalaries
 WHERE rnk <= 3;
 `` `
 ```
-
