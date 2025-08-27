@@ -3,6 +3,8 @@
 A personal study guide for grinding through the **NeetCode 150** Data Structures & Algorithms list and the **SQL 50** set.  
 This repo is meant to organize problems and keep notes in one place.
 
+🌐 Live site: [NEETCODE-150 & SQL-50 Study Guide](https://srijith-reddy.github.io/NEETCODE-150-SQL-50-Study-Guide/)
+
 ## Contents
 - Topic-wise folders for NeetCode 150
 - Topic-wise folders for SQL 50
